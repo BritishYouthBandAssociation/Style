@@ -1,11 +1,24 @@
+//sass modules
+@use 'sass:color';
+
 //reset styles
 @import 'base/_reset';
 
 // load variables
 @import 'utils/_variables';
 
+//load functions
+@import 'utils/functions/_math';
+
 // load mixins
+@import 'utils/mixins/_contrast';
 @import 'utils/mixins/_buttons';
+
+/* main style begins */
+@import 'base/_typography';
+
+//body styles
+@import 'layout/_page';
 
 //load components
 @import 'components/_buttons';

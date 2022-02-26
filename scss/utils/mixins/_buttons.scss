@@ -4,14 +4,22 @@
 
 @mixin button-variant(
 	$background,
-	$foreground,
-	$hover_bg: $foreground,
-	$hover_fg: $background,
+	$foreground: color-contrast($background),
+	$hover_bg: color.scale($background, $lightness: -30%),
+	$hover_fg: $foreground
 
 ) {
 	background-color: $background;
-	border-color: $background;
+	border: solid 1px $background;
 	color: $foreground;
+	font-weight: bold;
+	padding: $spacer-half;
+	margin: $spacer-half;
+	border-radius: .25rem;
+	cursor: pointer;
+	text-align: center;
+	font-size: $font-size;
+	text-decoration: none;
 
 	&:hover{
 		background-color: $hover_bg;

@@ -1,7 +1,5 @@
-.btn-default{
-	@include button-variant($subdued-blue, $white, $blue, $white);
-	font-weight: bold;
-	padding: $spacer-half;
-	border-radius: 10px;
-	cursor: pointer;
+@each $name, $colour in $colours{
+	.btn-#{$name}{
+		@include button-variant($colour);
+	}
 }
