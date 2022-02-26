@@ -12,7 +12,7 @@
 	background-color: $background;
 	border: solid 1px $background;
 	color: $foreground;
-	font-weight: bold;
+	font-weight: $button-weight;
 	padding: $spacer-half;
 	margin: $spacer-half;
 	border-radius: .25rem;

@@ -401,7 +401,7 @@ body {
   background-color: #282360;
   border: solid 1px #282360;
   color: #FFF;
-  font-weight: bold;
+  font-weight: 400;
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 0.25rem;
@@ -424,7 +424,7 @@ body {
   background-color: #E00;
   border: solid 1px #E00;
   color: #FFF;
-  font-weight: bold;
+  font-weight: 400;
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 0.25rem;
@@ -447,7 +447,7 @@ body {
   background-color: #060;
   border: solid 1px #060;
   color: #FFF;
-  font-weight: bold;
+  font-weight: 400;
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 0.25rem;

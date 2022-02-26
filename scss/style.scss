@@ -2,23 +2,23 @@
 @use 'sass:color';
 
 //reset styles
-@import 'base/_reset';
+@import 'base/reset';
 
 // load variables
-@import 'utils/_variables';
+@import 'utils/variables';
 
 //load functions
-@import 'utils/functions/_math';
+@import 'utils/functions/math';
 
 // load mixins
-@import 'utils/mixins/_contrast';
-@import 'utils/mixins/_buttons';
+@import 'utils/mixins/contrast';
+@import 'utils/mixins/buttons';
 
 /* main style begins */
-@import 'base/_typography';
+@import 'base/typography';
 
 //body styles
-@import 'layout/_page';
+@import 'layout/page';
 
 //load components
-@import 'components/_buttons';
+@import 'components/buttons';
