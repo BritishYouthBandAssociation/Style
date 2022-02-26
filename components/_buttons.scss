@@ -1,0 +1,3 @@
+.btn-default{
+	@include button-variant($subdued-blue, $white, $blue, $white);
+}

@@ -1,0 +1,21 @@
+//button mixins
+
+//style button based on passed colours
+
+@mixin button-variant(
+	$background,
+	$foreground,
+	$hover_bg: $foreground,
+	$hover_fg: $background,
+
+) {
+	background-color: $background;
+	border-color: $background;
+	color: $foreground;
+
+	&:hover{
+		background-color: $hover_bg;
+		border-color: $hover_bg;
+		color: $hover_fg
+	}
+}
