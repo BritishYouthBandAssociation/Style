@@ -16,11 +16,11 @@ $min-contrast-ratio: 4.5 !default;
 
 //put in an array so we can loop over contextual stylings etc
 $colours: (
-    "default": $default,
-    "error": $error,
-    "success": $success,
-    "dark": $black,
-    "light": $white
+	"default": $default,
+	"error": $error,
+	"success": $success,
+	"dark": $black,
+	"light": $white
 );
 
 //spacing
@@ -34,12 +34,12 @@ $heading-font: "Asket" !default;
 $body-font: "OpenSans" !default;
 
 $heading-sizes: (
-    1: $font-size * 2.6,
-    2: $font-size * 2.1,
-    3: $font-size * 1.85,
-    4: $font-size * 1.6,
-    5: $font-size * 1.35,
-    6: $font-size * 1.1
+	1: $font-size * 2.6,
+	2: $font-size * 2.1,
+	3: $font-size * 1.85,
+	4: $font-size * 1.6,
+	5: $font-size * 1.35,
+	6: $font-size * 1.1
 );
 
 $button-weight: 400;

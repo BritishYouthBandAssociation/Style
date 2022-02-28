@@ -7,7 +7,6 @@
 	$foreground: colour-contrast($background),
 	$hover_bg: color.scale($background, $lightness: -30%),
 	$hover_fg: $foreground
-
 ) {
 	background-color: $background;
 	border: solid 1px $background;
