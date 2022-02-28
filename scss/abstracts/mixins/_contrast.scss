@@ -23,32 +23,32 @@ $_luminance-list: 0.0008 0.001 0.0011 0.0013 0.0015 0.0017 0.002 0.0022 0.0025
 	0.8796 0.8879 0.8963 0.9047 0.9131 0.9216 0.9301 0.9387 0.9473 0.956 0.9647
 	0.9734 0.9823 0.9911 1;
 
-@function color-contrast(
+@function colour-contrast(
 	$background,
-	$color-contrast-dark: $color-contrast-dark,
-	$color-contrast-light: $color-contrast-light,
+	$colour-contrast-dark: $colour-contrast-dark,
+	$colour-contrast-light: $colour-contrast-light,
 	$min-contrast-ratio: $min-contrast-ratio
 ) {
-	$foregrounds: $color-contrast-light, $color-contrast-dark, $white, $black;
+	$foregrounds: $colour-contrast-light, $colour-contrast-dark, $white, $black;
 	$max-ratio: 0;
-	$max-ratio-color: null;
+	$max-ratio-colour: null;
 
-	@each $color in $foregrounds {
-		$contrast-ratio: contrast-ratio($background, $color);
+	@each $colour in $foregrounds {
+		$contrast-ratio: contrast-ratio($background, $colour);
 		@if $contrast-ratio > $min-contrast-ratio {
-			@return $color;
+			@return $colour;
 		} @else if $contrast-ratio > $max-ratio {
 			$max-ratio: $contrast-ratio;
-			$max-ratio-color: $color;
+			$max-ratio-colour: $colour;
 		}
 	}
 
-	@warn "Found no color leading to #{$min-contrast-ratio}:1 contrast ratio against #{$background}...";
+	@warn "Found no colour leading to #{$min-contrast-ratio}:1 contrast ratio against #{$background}...";
 
-	@return $max-ratio-color;
+	@return $max-ratio-colour;
 }
 
-@function contrast-ratio($background, $foreground: $color-contrast-light) {
+@function contrast-ratio($background, $foreground: $colour-contrast-light) {
 	$l1: luminance($background);
 	$l2: luminance(opaque($background, $foreground));
 
@@ -62,11 +62,11 @@ $_luminance-list: 0.0008 0.001 0.0011 0.0013 0.0015 0.0017 0.002 0.0022 0.0025
 // Return WCAG2.0 relative luminance
 // See https://www.w3.org/WAI/GL/wiki/Relative_luminance
 // See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
-@function luminance($color) {
+@function luminance($colour) {
 	$rgb: (
-		"r": red($color),
-		"g": green($color),
-		"b": blue($color)
+		"r": red($colour),
+		"g": green($colour),
+		"b": blue($colour)
 	);
 
 	@each $name, $value in $rgb {
@@ -87,7 +87,7 @@ $_luminance-list: 0.0008 0.001 0.0011 0.0013 0.0015 0.0017 0.002 0.0022 0.0025
 		(map-get($rgb, "b") * 0.0722);
 }
 
-// Return opaque color
+// Return opaque colour
 // opaque(#fff, rgba(0, 0, 0, .5)) => #808080
 @function opaque($background, $foreground) {
 	@return mix(rgba($foreground, 1), $background, opacity($foreground) * 100);

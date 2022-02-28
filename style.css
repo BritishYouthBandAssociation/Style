@@ -69,7 +69,7 @@ pre {
  * Remove the gray background on active links in IE 10.
   */
 a {
-  background-color: transparent;
+  background-colour: transparent;
 }
 
 /**
@@ -223,14 +223,14 @@ fieldset {
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
-  * 2. Correct the color inheritance from `fieldset` elements in IE.
+  * 2. Correct the colour inheritance from `fieldset` elements in IE.
    * 3. Remove the padding so developers are not caught out when they zero out
     *    `fieldset` elements in all browsers.
      */
 legend {
   box-sizing: border-box;
   /* 1 */
-  color: inherit;
+  colour: inherit;
   /* 2 */
   display: table;
   /* 1 */
@@ -339,7 +339,7 @@ template {
 
 /* main style begins */
 h1, .h1 {
-  color: #282360;
+  colour: #282360;
   margin: 0;
   padding: 0;
   font-family: "Asket";
@@ -348,7 +348,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  color: #282360;
+  colour: #282360;
   margin: 0;
   padding: 0;
   font-family: "Asket";
@@ -357,7 +357,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  color: #282360;
+  colour: #282360;
   margin: 0;
   padding: 0;
   font-family: "Asket";
@@ -366,7 +366,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  color: #282360;
+  colour: #282360;
   margin: 0;
   padding: 0;
   font-family: "Asket";
@@ -375,7 +375,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  color: #282360;
+  colour: #282360;
   margin: 0;
   padding: 0;
   font-family: "Asket";
@@ -384,7 +384,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  color: #282360;
+  colour: #282360;
   margin: 0;
   padding: 0;
   font-family: "Asket";
@@ -393,14 +393,14 @@ h6, .h6 {
 }
 
 body {
-  background-color: #EBEBEB;
+  background-colour: #EBEBEB;
   font-family: "OpenSans";
 }
 
 .btn-default {
-  background-color: #282360;
+  background-colour: #282360;
   border: solid 1px #282360;
-  color: #FFF;
+  colour: #FFF;
   font-weight: 400;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -411,9 +411,9 @@ body {
   text-decoration: none;
 }
 .btn-default:hover {
-  background-color: #1c1943;
-  border-color: #1c1943;
-  color: #FFF;
+  background-colour: #1c1943;
+  border-colour: #1c1943;
+  colour: #FFF;
 }
 .btn-default:active {
   position: relative;
@@ -421,9 +421,9 @@ body {
 }
 
 .btn-red {
-  background-color: #E00;
+  background-colour: #E00;
   border: solid 1px #E00;
-  color: #FFF;
+  colour: #FFF;
   font-weight: 400;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -434,9 +434,9 @@ body {
   text-decoration: none;
 }
 .btn-red:hover {
-  background-color: #a70000;
-  border-color: #a70000;
-  color: #FFF;
+  background-colour: #a70000;
+  border-colour: #a70000;
+  colour: #FFF;
 }
 .btn-red:active {
   position: relative;
@@ -444,9 +444,9 @@ body {
 }
 
 .btn-green {
-  background-color: #060;
+  background-colour: #060;
   border: solid 1px #060;
-  color: #FFF;
+  colour: #FFF;
   font-weight: 400;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -457,9 +457,9 @@ body {
   text-decoration: none;
 }
 .btn-green:hover {
-  background-color: #004700;
-  border-color: #004700;
-  color: #FFF;
+  background-colour: #004700;
+  border-colour: #004700;
+  colour: #FFF;
 }
 .btn-green:active {
   position: relative;
