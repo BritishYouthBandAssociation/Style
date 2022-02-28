@@ -5,7 +5,7 @@
 @mixin button-variant(
 	$background,
 	$foreground: colour-contrast($background),
-	$hover_bg: colour.scale($background, $lightness: -30%),
+	$hover_bg: color.scale($background, $lightness: -30%),
 	$hover_fg: $foreground
 
 ) {
