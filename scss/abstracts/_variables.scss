@@ -1,5 +1,18 @@
 //variables
 
+//responsive sizes
+$screen-width-sm: 576px;
+$screen-width-md: 768px;
+$screen-width-lg: 992px;
+$screen-width-xl: 1200px;
+
+$breakpoints: (
+	'sm',
+	'md',
+	'lg',
+	'xl'
+);
+
 //colours
 $black: #222 !default;
 $white: #FFF !default;
@@ -43,3 +56,6 @@ $heading-sizes: (
 );
 
 $button-weight: 400;
+
+//utility variables
+$display-types: ('none', 'block', 'inline', 'inline-block', 'flex');

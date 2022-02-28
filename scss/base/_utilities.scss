@@ -1,0 +1,17 @@
+@include generate-utility('d', 'display', $display-types);
+
+@include sm {
+	@include generate-utility('d-sm', 'display', $display-types);
+}
+
+@include md {
+	@include generate-utility('d-md', 'display', $display-types);
+}
+
+@include lg {
+	@include generate-utility('d-lg', 'display', $display-types);
+}
+
+@include xl {
+	@include generate-utility('d-xl', 'display', $display-types);
+}

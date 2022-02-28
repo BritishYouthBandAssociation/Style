@@ -1,0 +1,8 @@
+@mixin generate-utility($class, $property, $values){
+	@each $val in $values{
+		//generates class name like `d-none`, `d-inline-block` etc
+		.#{$class}-#{$val}{
+			#{$property}: #{$val};
+		}
+	}
+}
