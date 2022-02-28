@@ -32,8 +32,19 @@ As this project is intended as a style *framework*, the remaining 2 parts of the
 The demo subdirectory contains the files necessary to view the components
 
 ## Building
-Make sure you have sass installed (important!) then run
+This stylesheet is *generalised* so does not have any theme colours. To build without theme colours, simply call `sass scss/style.scss style.css`.
+
+To add theme colours, use the `Builder` class in the `build` folder and override the variables. An example can be found in `test.js`, or something like the following:
 
 ```
-sass scss/style.scss style.css
+const Builder = require('build/Builder.js');
+
+let build = new Builder();
+build.setVariable("default", "cherry");
+build.setVariable("danger", "#00F");
+build.setVariable("success", "#BADA55");
+
+build.build("scss/style.scss", "style.css");
 ```
+
+The above command sets our override for the 3 colours (`default`, `danger`, `success`) then builds the `scss/style.scss` SCSS file and saves the output at `style.css`.

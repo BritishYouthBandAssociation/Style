@@ -1,28 +1,24 @@
 //variables
 
 //colours
-$blue: #0E0199;
-$red: #E00;
-$subdued-blue: #282360;
-$subdued-red: #90131D;
-$green: #060;
+$black: #222 !default;
+$white: #FFF !default;
 
-$black: #222;
-$white: #FFF;
+$default: $black !default;
+$error: #E00 !default;
+$success: #060 !default;
 
-$default: $subdued-blue;
-$bg: #EBEBEB;
+$bg: #EBEBEB !default;
 
-//american sadly bc lib functions
 $colour-contrast-dark: $black;
 $colour-contrast-light: $white;
-$min-contrast-ratio: 4.5;
+$min-contrast-ratio: 4.5 !default;
 
 //put in an array so we can loop over contextual stylings etc
 $colours: (
     "default": $default,
-    "error": $red,
-    "success": $green,
+    "error": $error,
+    "success": $success,
     "dark": $black,
     "light": $white
 );
@@ -34,8 +30,8 @@ $spacer-half: $spacer * 0.5;
 //fonts
 $font-size: 1rem;
 $line-height: $font-size * 1.5;
-$heading-font: "Asket";
-$body-font: "OpenSans";
+$heading-font: "Asket" !default;
+$body-font: "OpenSans" !default;
 
 $heading-sizes: (
     1: $font-size * 2.6,
