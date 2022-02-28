@@ -1,0 +1,47 @@
+//variables
+
+//colours
+$blue: #0E0199;
+$red: #E00;
+$subdued-blue: #282360;
+$subdued-red: #90131D;
+$green: #060;
+
+$black: #222;
+$white: #FFF;
+
+$default: $subdued-blue;
+$bg: #EBEBEB;
+
+//american sadly bc lib functions
+$color-contrast-dark: $black;
+$color-contrast-light: $white;
+$min-contrast-ratio: 4.5;
+
+//put in an array so we can loop over contextual stylings etc
+$colours: (
+	"default": $default,
+	"red": $red,
+	"green": $green
+);
+
+//spacing
+$spacer: 1rem;
+$spacer-half: $spacer * 0.5;
+
+//fonts
+$font-size: 1rem;
+$line-height: $font-size * 1.5;
+$heading-font: "Asket";
+$body-font: "OpenSans";
+
+$heading-sizes: (
+	1: $font-size * 2.6,
+	2: $font-size * 2.1,
+	3: $font-size * 1.85,
+	4: $font-size * 1.6,
+	5: $font-size * 1.35,
+	6: $font-size * 1.1
+);
+
+$button-weight: 400;

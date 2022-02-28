@@ -1,0 +1,17 @@
+//sass modules
+@use 'sass:color';
+
+//abstracts
+@import 'abstracts';
+
+//reset styles
+@import 'vendors/normalise';
+
+/* main style begins */
+@import 'base/typography';
+
+//body styles
+@import 'layout';
+
+//load components
+@import 'components';

@@ -1,0 +1,5 @@
+@each $name, $colour in $colours{
+	.btn-#{$name}{
+		@include button-variant($colour);
+	}
+}

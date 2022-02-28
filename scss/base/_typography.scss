@@ -1,0 +1,10 @@
+@each $size, $font-size in $heading-sizes{
+	h#{$size}, .h#{$size}{
+		color: $default;
+		margin: 0;
+		padding: 0;
+		font-family: $heading-font;
+		font-size: $font-size;
+		text-transform: uppercase;
+	}
+}
