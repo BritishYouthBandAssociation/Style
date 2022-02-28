@@ -1,5 +1,6 @@
 const sass = require('sass');
 const fs = require('fs');
+const path = require('path')
 
 class Builder{
 	vars = {};
@@ -16,10 +17,10 @@ class Builder{
 	}
 
 	build(src, dest){
-		let res = sass.renderSync({
-		//	includePaths: [dir],
-			data: this.getVariables() + `@import '${src}';`,
-			outFile: dest
+		src = path.resolve(src);
+		let dir = path.dirname(src);
+		let res = sass.compileString(this.getVariables() + `@import '${src}';`, {
+			loadPaths: [dir]
 		});
 
 //		console.log(`Result: ${JSON.stringify(res)}`);
