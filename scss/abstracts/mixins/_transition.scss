@@ -1,0 +1,14 @@
+//shamelessly taken from BS
+@mixin transition($transition...){
+	@if length($transition) == 0 {
+		$transition: none;
+	}
+
+	@if nth($transition, 1) != null {
+		transition: $transition;
+	}
+
+	@media (prefers-reduced-motion: reduce){
+		transition: none;
+	}
+}

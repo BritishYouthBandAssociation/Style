@@ -1,0 +1,6 @@
+//extra custom resets
+
+//make sure the sizing is consistent (and what we expect!!)
+*, ::after, ::before{
+	box-sizing: border-box;
+}

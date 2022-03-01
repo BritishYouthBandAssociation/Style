@@ -23,6 +23,9 @@ $success: #060 !default;
 
 $bg: #EBEBEB !default;
 
+$input-bg: #D6D6D6 !default;
+$input-border: #808080 !default;
+
 $colour-contrast-dark: $black;
 $colour-contrast-light: $white;
 $min-contrast-ratio: 4.5 !default;
@@ -39,6 +42,9 @@ $colours: (
 //spacing
 $spacer: 1rem;
 $spacer-half: $spacer * 0.5;
+
+$radius-small: 10px;
+$radius-large: 20px;
 
 //fonts
 $font-size: 1rem;
