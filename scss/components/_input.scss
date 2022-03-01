@@ -1,0 +1,51 @@
+textarea,
+select,
+input:not([type=hidden]){
+	display: block;
+	width: 100%;
+	padding: $spacer;
+	background-color: $input-bg;
+	border: solid 1px $input-border;
+	border-radius: $radius-small;
+
+	&:focus{
+		outline: 2px solid color.adjust($default, $alpha: -0.3);
+		border-color: $default;
+	}
+
+	&:focus + label,
+	&:not(:placeholder-shown) + label{
+		top: 0.25rem;
+		font-size: $font-size * 0.75;
+		opacity: .85;
+	}
+}
+
+//wrapper for floaty labels
+.input{
+	position: relative;
+	margin: $spacer;
+
+	textarea,
+	select,
+	input:not([type=hidden]){
+		padding-top: $spacer * 1.5; //make room for label
+		line-height: 1;
+
+		&::placeholder{
+			color: transparent; //hide placeholder text
+		}
+	}
+
+	label {
+		position: absolute;
+		left: $spacer;
+		top: $spacer * 1.5;
+		opacity: 1;
+		@include transition(opacity .1s ease-in-out, font-size .1s ease-in-out, top .1s ease-in-out);
+	}
+}
+
+label{
+	color: $default;
+}
