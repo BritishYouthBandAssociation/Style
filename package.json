@@ -1,0 +1,13 @@
+{
+	"name": "style",
+	"version": "1.0.0",
+	"description": "Universal styling/branding using SCSS",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/BritishYouthBandAssociation/Style.git"
+	},
+	"bugs": {
+		"url": "https://github.com/BritishYouthBandAssociation/Style/issues"
+	},
+	"homepage": "https://github.com/BritishYouthBandAssociation/Style#readme"
+}
