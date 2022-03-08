@@ -1,0 +1,11 @@
+hr{
+    //transparent colour removes initial style
+    color: transparent;
+
+    //add some nice new styles
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+    border: 0;
+    border-top: 1px solid $input-border;
+    border-radius: 100%;
+}
