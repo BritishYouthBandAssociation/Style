@@ -24,4 +24,11 @@
 	.text-#{$name}{
 		color: $colour;
 	}
+
+	@each $size, $fs in $heading-sizes{
+		//nested heading fix
+		.text-#{$name} h#{$size}, .text-#{$name} .h#{$size}{
+			color: $colour;
+		}
+	}
 }
