@@ -20,4 +20,8 @@
 	.bg-#{$name}{
 		background-color: $colour;
 	}
+
+	.text-#{$name}{
+		color: $colour;
+	}
 }
