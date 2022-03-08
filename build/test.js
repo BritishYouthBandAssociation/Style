@@ -1,6 +1,8 @@
+'use strict';
+
 const Builder = require('./Builder.js');
 
-let build = new Builder();
+const build = new Builder();
 console.log("Created builder :)");
 
 //do BYBA colours

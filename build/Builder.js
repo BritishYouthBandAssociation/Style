@@ -1,6 +1,8 @@
+'use strict';
+
 const sass = require('sass');
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
 
 class Builder{
 	vars = {};
@@ -11,20 +13,18 @@ class Builder{
 	}
 
 	getVariables(){
-		let varString = Object.keys(this.vars).map((k, i) => `$${k}: ${this.vars[k]};` ).join("\n");
+		const varString = Object.values(this.vars).map((k, v) => `$${k}: ${v};` ).join("\n");
 		console.log(`Vars: ${varString}`);
 		return varString;
 	}
 
 	build(src, dest){
 		src = path.resolve(src);
-		let dir = path.dirname(src);
-		let res = sass.compileString(this.getVariables() + `@import '${src}';`, {
+		const dir = path.dirname(src);
+		const res = sass.compileString(this.getVariables() + `@import '${src}';`, {
 			loadPaths: [dir]
 		});
 
-//		console.log(`Result: ${JSON.stringify(res)}`);
-//		console.log(res.css.toString());
 		fs.writeFileSync(dest, res.css.toString());
 		console.log(`CSS written to ${dest}`);
 	}
