@@ -5,3 +5,25 @@
 	padding: 10px 10%;
 	margin-bottom: $spacer;
 }
+
+.nav-content{
+	display: flex;
+	align-items: center;
+	gap: $spacer;
+}
+
+//icons
+
+.hamburger div{
+	width: 35px;
+	height: 5px;
+	background-color: $default;
+	margin: 6px 0px;
+}
+
+//special colour override
+@each $name, $col in $colours{
+	.hamburger.text-#{$name} div, .text-#{$name} .hamburger div{
+		background-color: $col;
+	} 
+}
