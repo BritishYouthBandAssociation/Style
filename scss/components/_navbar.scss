@@ -13,17 +13,71 @@
 }
 
 //icons
+.hamburger{
+	input{
+		display: none; //hide checkbox
 
-.hamburger div{
-	width: 35px;
-	height: 5px;
-	background-color: $default;
-	margin: 6px 0px;
+		&:checked + label .nav-icon{
+			background-color: transparent;
+
+			&:before{
+				transform: rotate(135deg);
+			}
+
+			&:after{
+				top: $spacer * 0.8;
+				transform: rotate(-135deg);
+			}
+		}
+
+		
+	}
+
+	label{
+		opacity: 1!important; //this isn't a regular label
+		height: 2rem;
+		display: block;
+	}
+
+	.nav-icon{
+		position: relative;
+		display: block;
+		@include transition(all .2s);
+
+		&,
+		&:before,
+		&:after{
+			width: 3rem;
+			height: 5px;
+			background-color: $default;
+		}
+
+		&:before,
+		&:after{
+			content: "";
+			position: absolute;
+			left: 0;
+			display: inline-block;
+			@include transition(all .2s);
+		}
+
+		&:before{
+			top: $spacer * 0.8;
+		}
+
+		&:after{
+			top: $spacer * 1.6;
+		}
+	}
 }
 
 //special colour override
 @each $name, $col in $colours{
-	.hamburger.text-#{$name} div, .text-#{$name} .hamburger div{
-		background-color: $col;
+	.hamburger.text-#{$name} .nav-icon, .text-#{$name} .hamburger .nav-icon{
+		&,
+		&:before,
+		&:after{
+			background-color: $col;
+		}
 	} 
 }
