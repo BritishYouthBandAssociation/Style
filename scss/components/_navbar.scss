@@ -21,11 +21,12 @@
 			background-color: transparent;
 
 			&:before{
+				top: 0;
 				transform: rotate(135deg);
 			}
 
 			&:after{
-				top: $spacer * 0.8;
+				top: 0;
 				transform: rotate(-135deg);
 			}
 		}
@@ -41,7 +42,7 @@
 
 	.nav-icon{
 		position: relative;
-		display: block;
+		margin-top: $spacer * 0.8;
 		@include transition(all .2s);
 
 		&,
@@ -50,6 +51,7 @@
 			width: 3rem;
 			height: 5px;
 			background-color: $default;
+			display: inline-block;
 		}
 
 		&:before,
@@ -62,11 +64,11 @@
 		}
 
 		&:before{
-			top: $spacer * 0.8;
+			top: -$spacer * 0.8;
 		}
 
 		&:after{
-			top: $spacer * 1.6;
+			top: $spacer * 0.8;
 		}
 	}
 }
