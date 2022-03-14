@@ -3,3 +3,9 @@
 		@include button-variant($colour);
 	}
 }
+
+.btn-long{
+	display: block;
+	margin: 0;
+	width: 100%;
+}

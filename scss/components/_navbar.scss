@@ -2,5 +2,84 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 5px;
+	padding: 10px 10%;
+	margin-bottom: $spacer;
+}
+
+.nav-content{
+	display: flex;
+	align-items: center;
+	gap: $spacer;
+}
+
+//icons
+.hamburger{
+	input{
+		display: none; //hide checkbox
+
+		&:checked + label .nav-icon{
+			background-color: transparent;
+
+			&:before{
+				top: 0;
+				transform: rotate(135deg);
+			}
+
+			&:after{
+				top: 0;
+				transform: rotate(-135deg);
+			}
+		}
+
+		
+	}
+
+	label{
+		opacity: 1!important; //this isn't a regular label
+		height: 2rem;
+		display: block;
+	}
+
+	.nav-icon{
+		position: relative;
+		margin-top: $spacer * 0.8;
+		@include transition(all .2s);
+
+		&,
+		&:before,
+		&:after{
+			width: 3rem;
+			height: 5px;
+			background-color: $default;
+			display: inline-block;
+		}
+
+		&:before,
+		&:after{
+			content: "";
+			position: absolute;
+			left: 0;
+			display: inline-block;
+			@include transition(all .2s);
+		}
+
+		&:before{
+			top: -$spacer * 0.8;
+		}
+
+		&:after{
+			top: $spacer * 0.8;
+		}
+	}
+}
+
+//special colour override
+@each $name, $col in $colours{
+	.hamburger.text-#{$name} .nav-icon, .text-#{$name} .hamburger .nav-icon{
+		&,
+		&:before,
+		&:after{
+			background-color: $col;
+		}
+	} 
 }
