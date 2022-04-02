@@ -1,4 +1,5 @@
 @include generate-utility('d', 'display', $display-types);
+@include generate-utility('text', 'text-align', $text-alignments);
 
 @include sm {
 	@include generate-utility('d-sm', 'display', $display-types);
