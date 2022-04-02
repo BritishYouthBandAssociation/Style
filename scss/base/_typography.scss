@@ -8,3 +8,10 @@
 		text-transform: uppercase;
 	}
 }
+
+//not h1
+@for $size from 2 through 6{
+	h#{$size}, .h#{$size}{
+		margin-bottom: $spacer;
+	}
+}
