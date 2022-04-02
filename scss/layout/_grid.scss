@@ -16,6 +16,7 @@
 
 .col {
 	flex: 1 0 0%;
+	margin-bottom: $spacer;
 }
 
 
@@ -27,6 +28,7 @@
 			.col#{$name}-#{$i} {
 				flex: 0 0 auto;
 				width: percentage(divide($i, $columns));
+				margin-bottom: $spacer;
 			}
 		}
 	}
