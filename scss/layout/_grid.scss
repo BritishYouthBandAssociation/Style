@@ -1,0 +1,33 @@
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: $spacer * -0.5;
+	margin-right: $spacer * -0.5;
+
+	> * {
+		box-sizing: border-box;
+		flex-shrink: 0;
+		width: 100%;
+		max-width: 100%;
+		padding-left: $spacer * 0.5;
+		padding-right: $spacer * 0.5;
+	}
+}
+
+.col {
+	flex: 1 0 0%;
+}
+
+
+@each $name, $size in $breakpoints {
+	$name: if($name == "", "", "-" + $name);
+	
+	@include media-breakpoint-up($size) {
+		@for $i from 1 through $columns {
+			.col#{$name}-#{$i} {
+				flex: 0 0 auto;
+				width: percentage(divide($i, $columns));
+			}
+		}
+	}
+}
