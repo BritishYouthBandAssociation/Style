@@ -13,7 +13,7 @@ class Builder {
 	}
 
 	getVariables() {
-		const varString = Object.entries(this.vars).map(arr => `$${arr[0]}: ${arr[1]};`).join("\n");
+		const varString = Object.entries(this.vars).map(([k, v]) => `$${k}: ${v};`).join("\n");
 		console.log(`Vars: ${varString}`);
 		return varString;
 	}
