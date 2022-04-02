@@ -19,12 +19,15 @@
 }
 
 
-
-
-
-@for $i from 1 through $columns {
-	.col-#{$i} {
-		flex: 0 0 auto;
-		width: percentage(divide($i, $columns));
+@each $name, $size in $breakpoints {
+	$name: if($name == "", "", "-" + $name);
+	
+	@include media-breakpoint-up($size) {
+		@for $i from 1 through $columns {
+			.col#{$name}-#{$i} {
+				flex: 0 0 auto;
+				width: percentage(divide($i, $columns));
+			}
+		}
 	}
 }

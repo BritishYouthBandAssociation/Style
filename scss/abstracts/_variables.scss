@@ -1,18 +1,18 @@
 //variables
 
 //responsive sizes
-$screen-width-sm: 576px;
-$screen-width-md: 768px;
-$screen-width-lg: 992px;
-$screen-width-xl: 1200px;
+$screen-width-sm: 576;
+$screen-width-md: 768;
+$screen-width-lg: 992;
+$screen-width-xl: 1200;
 
-$breakpoints: ('sm',
-	'md',
-	'lg',
-	'xl'
-);
+$breakpoints: ('': 0,
+	'sm' : $screen-width-sm,
+	'md': $screen-width-md,
+	'lg': $screen-width-lg,
+	'xl': $screen-width-xl);
 
-$columns: 10;
+$columns: 12;
 
 //colours
 $black: #222 !default;

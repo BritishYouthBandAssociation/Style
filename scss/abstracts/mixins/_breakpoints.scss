@@ -1,23 +1,31 @@
 @mixin sm {
-	@media (min-width: #{$screen-width-sm}){
+	@media (min-width: #{$screen-width-sm}px) {
 		@content;
 	}
 }
 
 @mixin md {
-	@media (min-width: #{$screen-width-md}){
+	@media (min-width: #{$screen-width-md}px) {
 		@content;
 	}
 }
 
 @mixin lg {
-	@media (min-width: #{$screen-width-lg}){
+	@media (min-width: #{$screen-width-lg}px) {
 		@content;
 	}
 }
 
 @mixin xl {
-	@media (min-width: #{screen-width-xl}){
+	@media (min-width: #{screen-width-xl}px) {
 		@content;
+	}
+}
+
+@mixin media-breakpoint-up($breakpoint) {
+	@if $breakpoint > 0{
+		@media (min-width: #{$breakpoint}px) {
+			@content;
+		}
 	}
 }
