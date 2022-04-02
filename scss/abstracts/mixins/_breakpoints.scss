@@ -23,9 +23,13 @@
 }
 
 @mixin media-breakpoint-up($breakpoint) {
-	@if $breakpoint > 0{
+	@if $breakpoint > 0 {
 		@media (min-width: #{$breakpoint}px) {
 			@content;
 		}
+	}
+
+	@else {
+		@content;
 	}
 }
