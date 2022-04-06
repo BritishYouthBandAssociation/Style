@@ -7,7 +7,7 @@
 	> * {
 		box-sizing: border-box;
 		flex-shrink: 0;
-		width: 100%;
+		/*width: 100%;*/
 		max-width: 100%;
 		padding-left: $spacer * 0.5;
 		padding-right: $spacer * 0.5;
@@ -16,6 +16,7 @@
 
 .col {
 	flex: 1 0 0%;
+	margin-bottom: $spacer;
 }
 
 
@@ -27,6 +28,7 @@
 			.col#{$name}-#{$i} {
 				flex: 0 0 auto;
 				width: percentage(divide($i, $columns));
+				margin-bottom: $spacer;
 			}
 		}
 	}
