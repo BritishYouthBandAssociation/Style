@@ -41,3 +41,7 @@
 	position: relative;
 	top: -10px;
 }
+
+.card + .card{
+	margin-top: $spacer;
+}

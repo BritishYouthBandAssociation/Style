@@ -10,7 +10,7 @@
 ) {
 	background-color: $background;
 	border: solid 1px $background;
-	color: $foreground;
+	color: $foreground !important;
 	font-weight: $button-weight;
 	padding: $spacer-half;
 	margin: $spacer-half;
