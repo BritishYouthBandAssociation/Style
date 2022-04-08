@@ -8,6 +8,7 @@
 	$hover_bg: color.scale($background, $lightness: -30%),
 	$hover_fg: $foreground
 ) {
+	display: inline-block;
 	background-color: $background;
 	border: solid 1px $background;
 	color: $foreground !important;
