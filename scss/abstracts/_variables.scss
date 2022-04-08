@@ -60,6 +60,10 @@ $heading-sizes: (1: $font-size * 2.6,
 
 $button-weight: 400;
 
+//element selectors
+//style "textual" inputs - single line text, multi-line text, dropdown
+$text-input: 'textarea, select, input:not([type=hidden]):not([type=checkbox]):not([type=radio])';
+
 //utility variables
 $display-types: ('none', 'block', 'inline', 'inline-block', 'flex');
 $text-alignments: ('start', 'center', 'end'); //LTR/RTL accessible - go us!
