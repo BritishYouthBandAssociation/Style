@@ -63,3 +63,13 @@ $button-weight: 400;
 //utility variables
 $display-types: ('none', 'block', 'inline', 'inline-block', 'flex');
 $text-alignments: ('start', 'center', 'end'); //LTR/RTL accessible - go us!
+
+$margin-names: (
+	"margin": "m",
+	"margin-top": "mt",
+	"margin-bottom": "mb",
+	"margin-left": "ml",
+	"margin-right": "mr"
+);
+
+$margins: (0, $spacer * 0.5, $spacer, $spacer * 2);
