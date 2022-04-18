@@ -31,6 +31,8 @@ $colour-contrast-dark: $black;
 $colour-contrast-light: $white;
 $min-contrast-ratio: 4.5 !default;
 
+$disable-opacity: 0.7; //how much to fade disabled controls
+
 //put in an array so we can loop over contextual stylings etc
 $colours: ("default": $default,
 	"error": $error,
