@@ -1,0 +1,57 @@
+.modal {
+	visibility: hidden;
+
+	&:target {
+		visibility: visible;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&::before {
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			background-color: rgba(0, 0, 0, .7);
+			content: "";
+			cursor: default;
+		}
+	}
+
+	.modal-content {
+		position: relative;
+		width: 40vw;
+		padding: $spacer;
+		background-color: $white;
+	}
+
+	.close {
+		position: relative;
+		display: block;
+		top: -1rem;
+		right: -1rem;
+
+		&::after {
+			right: -1rem;
+			top: -1rem;
+			width: 2rem;
+			height: 2rem;
+			position: absolute;
+			display: flex;
+			z-index: 1;
+			align-items: center;
+			justify-content: center;
+			background-color: black;
+			border-radius: 50%;
+			color: white;
+			content: "×";
+			cursor: pointer;
+		}
+	}
+}
