@@ -1,6 +1,10 @@
 @include generate-utility('d', 'display', $display-types);
 @include generate-utility('text', 'text-align', $text-alignments);
 
+@each $prop, $class in $margin-names{
+	@include generate-utility($class, $prop, $margins, true);
+}
+
 @include sm {
 	@include generate-utility('d-sm', 'display', $display-types);
 }
@@ -32,4 +36,9 @@
 			color: $colour;
 		}
 	}
+}
+
+.disabled{
+	pointer-events: none;
+	opacity: $disable-opacity;
 }

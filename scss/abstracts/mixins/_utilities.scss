@@ -1,7 +1,12 @@
-@mixin generate-utility($class, $property, $values){
-	@each $val in $values{
+@mixin generate-utility($class, $property, $values, $useIndex: false){
+	@for $i from 1 through length($values){
+		$val: nth($values, $i);
+		$name: #{$class}-#{if($useIndex, $i - 1, $val)};
+	//}
+	//@each $val in $values{
 		//generates class name like `d-none`, `d-inline-block` etc
-		.#{$class}-#{$val}{
+		//.#{$class}-#{$val}{
+		.#{$name}{
 			#{$property}: #{$val};
 		}
 	}

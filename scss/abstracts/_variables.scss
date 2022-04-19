@@ -31,6 +31,8 @@ $colour-contrast-dark: $black;
 $colour-contrast-light: $white;
 $min-contrast-ratio: 4.5 !default;
 
+$disable-opacity: 0.7; //how much to fade disabled controls
+
 //put in an array so we can loop over contextual stylings etc
 $colours: ("default": $default,
 	"error": $error,
@@ -60,6 +62,20 @@ $heading-sizes: (1: $font-size * 2.6,
 
 $button-weight: 400;
 
+//element selectors
+//style "textual" inputs - single line text, multi-line text, dropdown
+$text-input: 'textarea, select, input:not([type=hidden]):not([type=checkbox]):not([type=radio])';
+
 //utility variables
 $display-types: ('none', 'block', 'inline', 'inline-block', 'flex');
 $text-alignments: ('start', 'center', 'end'); //LTR/RTL accessible - go us!
+
+$margin-names: (
+	"margin": "m",
+	"margin-top": "mt",
+	"margin-bottom": "mb",
+	"margin-left": "ml",
+	"margin-right": "mr"
+);
+
+$margins: (0, $spacer * 0.5, $spacer, $spacer * 2);

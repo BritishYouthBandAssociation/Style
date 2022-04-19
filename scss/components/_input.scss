@@ -1,6 +1,4 @@
-textarea,
-select,
-input:not([type=hidden]):not([type=checkbox]):not([type=radio]) {
+#{$text-input} {
 	display: block;
 	width: 100%;
 	padding: $spacer;
@@ -26,9 +24,7 @@ input:not([type=hidden]):not([type=checkbox]):not([type=radio]) {
 	position: relative;
 	margin: $spacer * 0.5 0;
 
-	textarea,
-	select,
-	input:not([type=hidden]) {
+	#{$text-input} {
 		padding-top: $spacer * 1.5; //make room for label
 		line-height: 1;
 

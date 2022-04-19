@@ -4,6 +4,10 @@
 	margin-left: $spacer * -0.5;
 	margin-right: $spacer * -0.5;
 
+	&.text-center{
+		justify-content: center;
+	}
+
 	> * {
 		box-sizing: border-box;
 		flex-shrink: 0;
@@ -16,7 +20,15 @@
 
 .col {
 	flex: 1 0 0%;
-	margin-bottom: $spacer;
+	//margin-bottom: $spacer;
+
+	.input:first-child{
+		margin-top: 0;
+	}
+
+	.input:last-child:not(:first-child){
+		margin-bottom: 0;
+	}
 }
 
 
@@ -28,7 +40,15 @@
 			.col#{$name}-#{$i} {
 				flex: 0 0 auto;
 				width: percentage(divide($i, $columns));
-				margin-bottom: $spacer;
+				//margin-bottom: $spacer;
+
+				.input:first-child{
+					margin-top: 0;
+				}
+
+				.input:last-child:not(:first-child){
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
